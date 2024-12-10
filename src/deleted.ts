@@ -1,6 +1,6 @@
 import { hasOwnProperty, isEmpty, isObject, makeObjectWithoutPrototype } from "./utils";
 
-const deletedDiff = (lhs, rhs) => {
+const deletedDiff = (lhs: any, rhs: any) => {
   if (lhs === rhs || !isObject(lhs) || !isObject(rhs)) return {};
 
   return Object.keys(lhs).reduce((acc, key) => {

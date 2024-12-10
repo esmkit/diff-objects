@@ -1,6 +1,6 @@
 import { hasOwnProperty, isDate, isEmptyObject, isObject, makeObjectWithoutPrototype } from "./utils";
 
-const diff = (lhs, rhs) => {
+const diff = (lhs: any, rhs: any) => {
   if (lhs === rhs) return {}; // equal return no diff
 
   if (!isObject(lhs) || !isObject(rhs)) return rhs; // return updated rhs
@@ -14,7 +14,7 @@ const diff = (lhs, rhs) => {
   }, makeObjectWithoutPrototype());
 
   if (isDate(lhs) || isDate(rhs)) {
-    if (lhs.valueOf() == rhs.valueOf()) return {};
+    if (lhs.valueOf() === rhs.valueOf()) return {};
     return rhs;
   }
 

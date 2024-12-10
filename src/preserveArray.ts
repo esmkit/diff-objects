@@ -1,8 +1,8 @@
 import { hasOwnProperty, isObject } from "./utils";
 
-const getLargerArray = (l, r) => (l.length > r.length ? l : r);
+const getLargerArray = (l: any, r: any) => (l.length > r.length ? l : r);
 
-const preserve = (diff, left, right) => {
+const preserve = (diff: any, left: any, right: any) => {
   if (!isObject(diff)) return diff;
 
   return Object.keys(diff).reduce((acc, key) => {
@@ -12,6 +12,7 @@ const preserve = (diff, left, right) => {
     if (Array.isArray(leftArray) && Array.isArray(rightArray)) {
       const array = [...getLargerArray(leftArray, rightArray)];
       return {
+        // biome-ignore lint/performance/noAccumulatingSpread: <explanation>
         ...acc,
         [key]: array.reduce((acc2, item, index) => {
           if (hasOwnProperty(diff[key], index)) {
@@ -26,6 +27,7 @@ const preserve = (diff, left, right) => {
     }
 
     return {
+      // biome-ignore lint/performance/noAccumulatingSpread: <explanation>
       ...acc,
       [key]: diff[key],
     };
