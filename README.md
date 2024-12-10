@@ -1,4 +1,4 @@
-# @esmkit/boilerplate
+# @esmkit/diff-objects
 
 high-performance JavaScript utility library with a small bundle size and strong type annotations.
 
@@ -11,17 +11,17 @@ high-performance JavaScript utility library with a small bundle size and strong 
 ## Installation
 
 ```bash
-npm install @esmkit/boilerplate
+npm install @esmkit/diff-objects
 # or
-yarn add @esmkit/boilerplate
+yarn add @esmkit/diff-objects
 # or
-bun add @esmkit/boilerplate
+bun add @esmkit/diff-objects
 ```
 
 ## Usage
 
 ```ts
-import { add } from '@esmkit/boilerplate';
+import { add } from '@esmkit/diff-objects';
 
 add(1, 2); // 3
 ```
