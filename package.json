@@ -1,8 +1,8 @@
 {
   "name": "@esmkit/diff-objects",
   "version": "0.1.0",
-  "license": "UNLICENSED",
-  "description": "@esmkit/diff-objects",
+  "license": "MIT",
+  "description": "Deep diffs two objects, including nested structures of arrays and objects, and return the difference.",
   "author": "Billgo <hi@billgo.me>",
   "bugs": "https://github.com/esmkit/diff-objects/issues",
   "repository": "git+ssh://git@github.com:esmkit/diff-objects.git",
