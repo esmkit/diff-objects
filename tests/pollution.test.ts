@@ -1,7 +1,8 @@
+import { describe, expect, test } from "bun:test";
 import addedDiff from "../src/added";
-import updatedDiff from "../src/updated";
-import diff from "../src/diff";
 import deletedDiff from "../src/deleted";
+import diff from "../src/diff";
+import updatedDiff from "../src/updated";
 
 describe("Prototype pollution", () => {
   describe("diff", () => {
