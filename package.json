@@ -9,7 +9,10 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "files": ["dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "exports": {
     ".": {
       "require": {
@@ -30,15 +33,14 @@
     "build:esm": "bunx tsup",
     "start": "bun run --watch examples/index.ts"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@devjskit/biome-config": "^0.1.14",
-    "@types/bun": "^1.1.14",
-    "@types/node": "^22.10.1",
-    "@types/web": "^0.0.186",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2"
+    "@biomejs/biome": "2.0.4",
+    "@devjskit/biome-config": "^0.2.0",
+    "@types/bun": "^1.2.17",
+    "@types/node": "^24.0.3",
+    "@types/web": "^0.0.243",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",

@@ -18,21 +18,21 @@ yarn add @esmkit/diff-objects
 bun add @esmkit/diff-objects
 ```
 
-## Functions available:
+## Functions available
 
 - [`diff(originalObj, updatedObj)`](#diff)
  returns the difference of the original and updated objects
 
- - [`addedDiff(original, updatedObj)`](#addeddiff)
+- [`addedDiff(original, updatedObj)`](#addeddiff)
  returns only the values added to the updated object
 
- - [`deletedDiff(original, updatedObj)`](#deleteddiff)
+- [`deletedDiff(original, updatedObj)`](#deleteddiff)
  returns only the values deleted in the updated object
 
- - [`updatedDiff(original, updatedObj)`](#updateddiff)
+- [`updatedDiff(original, updatedObj)`](#updateddiff)
  returns only the values that have been changed in the updated object
 
- - [`detailedDiff(original, updatedObj)`](#detaileddiff)
+- [`detailedDiff(original, updatedObj)`](#detaileddiff)
  returns an object with the added, deleted and updated differences
 
 ## Importing
@@ -41,9 +41,9 @@ bun add @esmkit/diff-objects
 import { diff, addedDiff, deletedDiff, updatedDiff, detailedDiff } from '@esmkit/diff-objects';
 ```
 
-## Usage:
+## Usage
 
-### `diff`:
+### `diff`
 
 ```js
 const lhs = {
@@ -90,7 +90,7 @@ console.log(diff(lhs, rhs)); // =>
 */
 ```
 
-### `addedDiff`:
+### `addedDiff`
 
 ```js
 const lhs = {
@@ -133,7 +133,7 @@ console.log(addedDiff(lhs, rhs));
 */
 ```
 
-### `deletedDiff`:
+### `deletedDiff`
 
 ```js
 const lhs = {
@@ -176,7 +176,7 @@ console.log(deletedDiff(lhs, rhs));
 */
 ```
 
-### `updatedDiff`:
+### `updatedDiff`
 
 ```js
 const lhs = {
@@ -212,7 +212,7 @@ console.log(updatedDiff(lhs, rhs));
 */
 ```
 
-### `detailedDiff`:
+### `detailedDiff`
 
 ```js
 const lhs = {
@@ -269,7 +269,3 @@ console.log(detailedDiff(lhs, rhs));
 }
 */
 ```
-
-## License
-
-MIT © BILLGO. See LICENSE for details.

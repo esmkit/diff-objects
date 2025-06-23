@@ -9,7 +9,7 @@ const diff = (lhs: any, rhs: any): any => {
   const r = rhs;
 
   const deletedValues = Object.keys(l).reduce((acc, key) => {
-    // biome-ignore lint/performance/noAccumulatingSpread: <explanation>
+    // biome-ignore lint/performance/noAccumulatingSpread: using spread for object diff accumulation
     return hasOwnProperty(r, key) ? acc : { ...acc, [key]: undefined };
   }, {});
 
@@ -44,14 +44,14 @@ const diff = (lhs: any, rhs: any): any => {
   }
 
   return Object.keys(r).reduce((acc, key) => {
-    // biome-ignore lint/performance/noAccumulatingSpread: <explanation>
+    // biome-ignore lint/performance/noAccumulatingSpread: using spread for object diff accumulation
     if (!hasOwnProperty(l, key)) return { ...acc, [key]: r[key] }; // return added r key
 
     const difference = diff(l[key], r[key]);
 
     if (isObject(difference) && isEmpty(difference) && !isDate(difference)) return acc; // return no diff
 
-    // biome-ignore lint/performance/noAccumulatingSpread: <explanation>
+    // biome-ignore lint/performance/noAccumulatingSpread: using spread for object diff accumulation
     return { ...acc, [key]: difference }; // return updated key
   }, deletedValues);
 };
